@@ -1,0 +1,49 @@
+{
+  "name": "tsmatch",
+  "version": "1.0.0-beta1",
+  "description": "A functional pattern matching implementation inspired by fsharp's match construct. Built for TypeScript. ",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nozzlegear/tsmatch.git"
+  },
+  "keywords": [
+    "match",
+    "typescript",
+    "functional"
+  ],
+  "author": "Joshua Harms <joshua@nozzlegear.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nozzlegear/tsmatch/issues"
+  },
+  "homepage": "https://github.com/nozzlegear/tsmatch#readme",
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "jest": "^21.0.2",
+    "ts-jest": "^21.0.0",
+    "typescript": "^2.5.2"
+  }
+}

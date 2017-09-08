@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# built files
+*.js
+*.tar.*
+*.tar
+*.d.ts
