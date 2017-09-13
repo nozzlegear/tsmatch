@@ -105,6 +105,22 @@ test("Matches generic when case", () => {
     expect(result).toBe(input)
 })
 
+test("Matches value with a when case", () => {
+    const input = "browser";
+    const expected = "found expected case";
+    const neverTrue = () => 1 > 2;
+    const alwaysTrue = () => 2 > 1;
+
+    const result = match(input, [
+        withCase("server", neverTrue, _ => "first case"),
+        withCase("server", alwaysTrue, _ => "second case"),
+        withCase("browser", neverTrue, _ => "third case"),
+        withCase("browser", alwaysTrue, _ => expected)
+    ])
+
+    expect(result).toBe(expected);
+})
+
 test("Matches fallthrough case", () => {
     const input = 117
 

@@ -145,7 +145,7 @@ export function withCase(...args: any[]): TryMatch {
     const onMatch: OnMatch<any> = args[2];
 
     return (givenValue: any) => ({
-        matches: isTypeString(value) ? matchTypeString(value, givenValue) : matchValue(value, givenValue),
+        matches: (isTypeString(value) ? matchTypeString(value, givenValue) : matchValue(value, givenValue)) && checkMatch(givenValue),
         giveValue: onMatch
     })
 }
