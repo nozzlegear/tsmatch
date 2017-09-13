@@ -1,6 +1,6 @@
 {
   "name": "tsmatch",
-  "version": "1.0.0-beta2",
+  "version": "1.0.0-beta3",
   "description": "A functional pattern matching implementation inspired by fsharp's match construct. Built for TypeScript. ",
   "main": "index.js",
   "typings": "index.d.ts",
